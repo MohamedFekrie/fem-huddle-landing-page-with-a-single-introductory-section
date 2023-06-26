@@ -1,0 +1,105 @@
+:root {
+    --bg-color: hsl(257, 40%, 49%);
+    --hover-color: hsl(300, 69%, 71%)
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: #fff
+}
+
+body {
+    background: hsl(257, 40%, 49%) url(images/bg-desktop.svg);
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+}
+
+.container {
+    width: 95%;
+    height: 100%;
+    margin: 40px auto 0;
+    padding: 32px;
+}
+
+.main {
+    display: grid;
+    grid-auto-rows: 10% 70%;
+    grid-template-areas:
+        "logo logo"
+        "img cont";
+}
+
+.main a {
+    margin-bottom: 20%;
+    grid-area: logo;
+}
+
+.main a .logo {
+    width: 200px;
+    display: inline-block;
+    margin-bottom: 20%;
+}
+
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 6%;
+}
+
+.main-content .image {
+    width: 600px;
+    grid-area: img;
+}
+
+.main-content {
+    grid-area: cont;
+}
+
+.main-content .content {
+    margin-left: 5%;
+    margin-top: 6%;
+}
+
+.main-content .content h1 {
+    font-size: 36px;
+    margin-bottom: 5%;
+}
+
+.main-content .content p {
+    color: #ffffffb0;
+}
+
+.main-content .content .btn {
+    background-color: #fff;
+    color: var(--bg-color);
+    width: 159px;
+    text-align: center;
+    height: 46px;
+    border-radius: 23px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5%;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.main-content .content .btn span {
+    color: var(--bg-color)
+}
+
+.main-content .content .btn:hover {
+    background-color: var(--hover-color);
+    box-shadow: 0px 0px 4px 1px #fff;
+}
+
+.main-content .content .btn:hover span {
+    color: #fff;
+}
